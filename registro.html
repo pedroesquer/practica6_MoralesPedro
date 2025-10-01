@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registrate nebula</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="./styles/styles.css"/>
+    </head>
+    <body>
+        <nav>
+            <a href="./index.html"><img src="./imgs/nebula-03.svg" height="80px"></a>
+            <ul>
+                <li><a href="./about.html">Nosotros</a></li>
+                <li><a href="./comunidad.html">Comunidad</a></li>
+                <li><a href="./registro.html">registro</a></li>
+            </ul>  
+        </nav>
+        <header>
+            <h1>Regisro de usuarios</h1>
+        </header>
+            <main>
+                <section class="formulario">
+                    <form name="form_nuevo_usuario" method = "GET" action="/UsuariosServlet" enctype="application/x-www-form-urlencoded">
+                        <div id ="titulo">
+                            <h3>Nuevo usuario</h3>
+                            <span>Completa la informacion y envia tus datos.</span>
+                        </div>
+                        <div name = "nombre">
+                            <label for="txt_name">Nombre</label>
+                            <input id="txt_name" name ="txt_name" type="text" maxlength="100" minlength="10" required>
+                            <span>Tu nombre completo</span>
+                        </div>
+                        <div name = "correo">
+                            <label for="txt_mail">Email</label>
+                            <input id="txt_mail" name ="txt_mail" type="email" maxlength="100" minlength="5" required>
+                            <span>Tu correo para recibir notificaciones</span>
+                        </div>
+                        <div name = "dob">
+                            <label for="txt_dob">Fecha de nacimiento</label>
+                            <input type="date" id = "txt_dob" name = "txt_dob" required>
+                            <span>Tu fecha de nacimiento</span>
+                        </div>
+                        <div name = "contrasenia">
+                            <label for="txt_password">Contraseña</label>
+                            <input type="txt_password" name = "txt_password" type = "password" required>
+                            <span>Tu contrasenia aqui</span>
+                        </div>
+                        <div name = "pseudonimo">
+                            <label for="txt_nick_name">Pseudónimo</label>
+                            <input type="txt_nick_name" name = "txt_nick_name" type = "text" required pattern="[a-zA-Z]{3,10}-{0-9}{2,10}">
+                            <span>Escribe tu nickname aqui</span>
+                        </div>
+                        <div name = estado>
+                            <label for="rad_statatus">Estado</label>
+                            <div name = "radios_estados" class="radios_estados">
+                                <input type="radio" value="soltero" id="rad_single" name ="rad_statatus">
+                                <label for="rad_single">Soltero</label>
+                                <input type="radio" value="Casado" id = "rad_marry" name = "rad_statatus">
+                                <label for="rad_marry">Casado</label>
+                                <input type="radio" value="Complicado" id = "rad_complicated" name = "rad_statatus">
+                                <label for="rad_complicated">Es complicado</label>
+                            </div>
+                        </div>
+                        <div name = "cuenta" >
+                            <label for="sel_account">Cuenta</label>
+                            <select name="sel_account" id="sel_account" required    >
+                                <option value="">Selecciona una opcion</option>
+                                <option value="gratis">Gratis</option>
+                                <option value="basica">Basica</option>
+                                <option value="premium">Premium</option>
+                            </select>
+                            <span>Selecciona un tipo de cuenta para desbloquear caracteristics</span>
+                        </div>
+                        <div name = "tyc">
+                            <label for="chk_tyc">Aceptar terminos y condiciones</label>
+                            <input type="checkbox" required id = "chk_tyc" name = "chk_tyc" value="aceptado">
+                            <span>Debes de aceptar los terminos y condiciones.</span>
+                        </div>
+                        <div name = "options" class="options">
+                            <button type="submit">Registrar</button>
+                            <button type="reset">Cancelar</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        
+        <footer>
+            <div>
+                siguenos en nuestras redes
+                <div>
+                    <a href="www.instagram.com" target="_blank">instagram</a><br>
+                    <a href="www.youtube.com" target="_blank">youtube</a><br>
+                    <a href="www.facebook.com" target="_blank">facebook</a><br>
+                    <a href="www.tiktok.com" target="_blank">tiktok</a>
+                </div>
+            </div>
+            <p>Copyright nebula2025</p>
+            <a href="./tyc.html" target="_blank">Terminos y condiciones</a>
+        </footer>
+    </body>
+
+</html>
