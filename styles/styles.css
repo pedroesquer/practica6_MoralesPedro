@@ -105,6 +105,14 @@ input, label{
     width: 100%;
     height: 30px;
 }
+input:focus{
+    outline: none;
+    background-color: var(--highlight);
+}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+  border: 2px solid var(--text-color-red);
+}
 
 .radios_estados{
     display: flex;
